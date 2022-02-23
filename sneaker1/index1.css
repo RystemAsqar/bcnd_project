@@ -1,0 +1,35 @@
+.section{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.section .first{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000;
+    padding: 30px 50px;
+}
+
+.first i{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.check{
+    display: flex;
+    gap: 30px;
+}
+
+.first span >input{
+    width: 60%;
+    height: 30px;
+    border-radius: 10px;
+}
+
+@media(max-width:993px){
+    .check{
+        flex-direction: column;
+    }
+}
