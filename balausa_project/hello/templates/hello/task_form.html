@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDUclubs</title>
+    <link rel="stylesheet" href="hello/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+</head>
+
+<style>
+      .club{
+         background-color: #0827d6;
+       
+      }
+      .club p{
+        letter-spacing:5px;
+         font-size: 63px;
+         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+         margin-left: 20%;
+          margin-top: -1%;
+          color: white;
+      }
+      .logo p{
+          margin-top:-2%;
+          font-family: 'Abril Fatface', cursive;
+          margin-left: 10%;
+          font-size: 22px;
+          letter-spacing: 2px;
+          color: #0621b4;
+
+      }
+
+     
+      
+      .first_part{
+          background-image: url(hello/media/clubs.jpeg);
+         
+      }
+      .main{
+          margin-left:30%;
+      }
+      .submit{
+        text-decoration: none;
+      }
+</style>
+  
+
+
+<body>
+    <div class="club">
+        <p>SDU CLUBS</p>
+    </div>
+
+    <div class="first_part">
+        <div class="logo">
+            <p>SDU</p>
+        </div>
+
+        
+    </div>
+    <div class= "main">
+       
+        <div class = "form">
+            <form class= "registr" method = "POST" action = "">
+                {% csrf_token %}
+                {{form.as_p}}
+               <input  class="submit" type = "submit" value = "Submit">
+        
+              </from>
+        
+              <button ><a class="submit" href = "{% url 'tasks'%}">Go Back</a></button>
+              
+        </div>
+        </div>
+    
+   
+</body>
+</html>
