@@ -1,0 +1,45 @@
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDUclubs</title>
+    <link rel="stylesheet" href="hello/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/hello/css/task_form.css'%}">
+
+</head>
+
+
+     
+<body>
+    <div class="header">
+        <div class = "logo">
+            <img src="{% static  '/hello/img/logo.jpeg'%}" alt="logo" width="75" height="50">
+        </div>
+        <div class="club">
+            <p>SDU CLUBS</p>
+        </div>
+
+    </div>
+        
+    </div>
+    <div class= "main">
+       
+        <div class = "form">
+            <form class= "registr" method = "POST" action = "">
+                {% csrf_token %}
+                {{form.as_p}}
+               <input  class="submit" type = "submit" value = "Submit">
+        
+              </from>
+        
+              <button ><a class="submit" href = "{% url 'tasks'%}">Go Back</a></button>
+              
+        </div>
+        </div>
+    
+   
+</body>
+</html>
