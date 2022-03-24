@@ -1,0 +1,96 @@
+<!-- <div style="text-align:center" class="container">
+  <h2>Login</h2>
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p}}
+    <input type="submit" value="Submit">
+  </form>
+  <a style="text-decoration: none;" href="{% url 'signup' %}">signup</a>
+
+</div><nav></nav>
+ -->
+
+ 
+<style>
+  .form-group9{
+      display: flex;
+      justify-content: center;
+  }
+  .container1{
+    text-align: center;
+    margin-top: 219px; 
+  }
+ 
+  input {
+    width: 10%;
+    padding: 12px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: #d1d2fd ;
+    outline: none;
+    border-radius: 5px;
+    width: 14%;
+  }
+  
+  input:focus {
+    background-color: rgb(174, 197, 248);
+  }
+
+
+  h1{
+    color: rgb(104, 85, 228);
+  }
+  .btn1 {
+    background-color: #6f63d4; /* Green */
+    border: none;
+    color: white;
+    padding: 7px 13px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 8px 5px; 
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+    
+  }
+ 
+  .errorlist{
+    opacity: 0;
+  }
+</style>
+<form method ="post">
+  {% csrf_token %}
+
+  {{ form.non_field_errors }}
+  <div class="container1">
+    <div class="form-group">
+      <h1 style="text-align: center;">SDU clubs</h1>
+    
+      <label for="{{ form.username.id_for_label }}">Username</label>
+      <br>
+      {{ form.username }}
+      
+      <script>
+         let a = document.querySelector('.errorlist');
+         let b = a.innerText;
+         b = " Wrong password"
+         alert(b);
+      </script>
+       
+    </div>
+<br>
+
+    
+      <label for="{{ form.password.id_for_label }}" >Password</label>
+      <br>
+      {{ form.password }}
+      {{ form.password.errors }}
+
+  <br>
+  <button class ="btn1"  style = "text-align: center;  "  type="submit">Login</button>
+</div>
+</form>
