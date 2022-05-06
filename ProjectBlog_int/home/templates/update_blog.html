@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+<title>
+    {% block title %}
+      Add a new post
+    {% endblock %}
+</title>
+
+{% block content %}
+</br>
+<div class="container">
+    <div class="form-group">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.media }}
+            {{ form.as_p }}
+            <button class="btn btn-outline-primary">Update</button>
+    </div>
+</div>
+{% endblock %}

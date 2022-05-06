@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+</br>
+<div class="container">
+<h1>POSTS</h1>
+<ul>
+{% for blog in object_list %}
+
+  
+        <br/></br>
+        <a class="" href="{% url 'blog_detail' blog.pk %}" style="font-weight: 700; color: rgb(61, 105, 173);">{{blog.title}}</a>
+        <br/></br>
+        <a class="" href="{% url 'update_post' blog.pk %}" style="font-weight: 700; color: rgb(187, 78, 78);">Edit</a>
+        <a class="" href="{% url 'delete_post' blog.pk %}" style="font-weight: 700; color: rgb(187, 78, 78);">Delete</a>
+        <br/></br>
+        <a href="{% url 'blog_detail' blog.pk %}">
+            <img class="img-fluid card-img-top" src="/media/{{blog.image}}" alt="..."/></a>
+            <hr style="border: 2px dashed rgb(0, 0, 0);">
+    
+{% endfor %}
+</ul>
+</div>
+
+{% endblock %}
